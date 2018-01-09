@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+	<title>Throw dice</title>
+	
+	<script>
+		function init(){
+			var n = 1 + Math.floor(Math.random()*3);
+			var c = document.getElementById("myCanvas");
+			var ctx = c.getContext("2d");
+			ctx.strokeRect(10,10,100,100);
+			
+			function draw1(){
+			ctx.beginPath();
+			ctx.arc(40,40,6,0,Math.PI*2,true);
+			ctx.closePath();
+			ctx.fill();
+ 			}
+
+ 			function draw2(){
+			ctx.beginPath();
+			ctx.arc(40,40,6,0,Math.PI*2,true);
+			ctx.arc(80,80,6,0,Math.PI*2,true);
+			ctx.closePath();
+			ctx.fill();
+ 			}
+
+ 			function draw3(){
+			ctx.beginPath();
+			ctx.arc(40,40,6,0,Math.PI*2,true);
+			ctx.arc(80,80,6,0,Math.PI*2,true);
+			ctx.arc(60,60,6,0,Math.PI*2,true);
+			ctx.closePath();
+			ctx.fill();
+ 			}
+
+			if(n=1){
+				draw1();
+				if (n=2) {
+					draw2();
+					if(n=3)	{
+						draw3();
+					}			
+				}
+			}		
+				
+		}
+
+		
+		
+	</script>
+	
+	
+</head>
+<body onload="init();">
+	<canvas id="myCanvas" width="600" height="400" style="border:1px solid #c3c3c3;">
+		your brower do not support canvas tag !
+	</canvas>
+	
+</body>
+</html>
